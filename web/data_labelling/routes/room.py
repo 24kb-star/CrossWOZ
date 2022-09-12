@@ -78,9 +78,9 @@ def leave(room):
         if not lastmsg:
             return '还没消息', 403
         gugu = lastmsg.payload
-        for item in gugu:
-            if not item[3]:
-                return '表单没填完', 403
+        # for item in gugu:
+        #     if not item[3]:
+        #         return '表单没填完', 403
     except:
         pass
 

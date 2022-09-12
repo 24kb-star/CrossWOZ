@@ -8,7 +8,8 @@ from .models import *
 
 def resetdb():
     all_tables = [
-        User, Task, Room, Message
+        User, 
+        Task, Room, Message
     ]
     db.drop_tables(all_tables)
     db.create_tables(all_tables)

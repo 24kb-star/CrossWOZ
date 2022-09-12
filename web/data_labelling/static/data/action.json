@@ -1,0 +1,27 @@
+{
+    "action_type":["notify_success","notify_failure","request","inform","general","recommend"],
+    "general":["welcome","thank","bye","do_not_understand"],
+    "intent":{
+        "CREATE_ALARM": {"m": ["time"],"n":["date"]},
+        "CANCEL_ALARM": {"m": ["time"],"n":["date"]},
+        "CHECK_ALARM": {},
+        "DELETE_ALARM": {"m": ["time"],"n":["date"]},
+        "PLAY_VIDEO": {"m":["videoName","index"],"n":["category","country","sort","appName","artist"]},
+        "PLAY_MUSIC": {"m":[],"n":["musicLanguage","artist","appName","scene","songName"]},
+        "CALL":{"m":["contact","phoneNumber","index"],"n":["phoneCard"]},
+        "SMARTHOME_SWITCH_OFF":{"m":["smarthome.devicename"],"n":["smarthome.room"]},
+        "SMARTHOME_SWITCH_ON":{"m":["smarthome.devicename"],"n":["smarthome.room"]},
+        "OPEN_APP":{"m":["appName"],"n":["deviceType"]},
+        "CLOSE_APP":{"m":["appName"],"n":["deviceType"]},
+        "CARCONTROL_SET_SEAT_MODE":{"m":["carcontrol.mode","carcontrol.desLocation","carcontrol.deviceType"],"n":[]},
+        "CARCONTROL_UNSET_SEAT_MODE":{"m":["carcontrol.mode","carcontrol.desLocation","carcontrol.deviceType"],"n":[]},
+        "CARCONTROL_SWITCH_ON":{"m":["carcontrol.deviceType"],"n":["carcontrol.desLocation"]},
+        "CARCONTROL_SWITCH_OFF":{"m":["carcontrol.deviceType"],"n":["carcontrol.desLocation"]},
+        "CARCONTROL_SET_TEMPERATURE":{"m":["carcontrol.charactervalue","carcontrol.deviceType"],"n":["carcontrol.desLocation"]},
+        "CARCONTROL_SET_SEAT_GEAR":{"m":["carcontrol.mode","carcontrol.deviceType"],"n":["carcontrol.desLocation"]},
+        "CARCONTROL_SET_OPENER":{"m":["carcontrol.deviceType","carcontrol.charactervalue"],"n":["carcontrol.desLocation"]},
+        "SEARCH_VIDEO": {"m":[],"n":["category","country","sort","appName","artist","videoName"]},
+        "SEARCH_MUSIC": {"m":[],"n":["musicLanguage","artist","appName","scene","songName"]},
+        "CHECK_WEATHER":{"m":[],"n":["time","country","city","checkSpecialDay","district"]}
+    }
+}

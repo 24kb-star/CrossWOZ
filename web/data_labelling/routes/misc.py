@@ -39,17 +39,17 @@ def import_all():
     count = 0
 
     def import_one(path):
-        with open(path, 'r') as f:
+        with open(path, 'r',encoding='utf-8') as f:
             data = json.load(f)
         def f(options):
-            items = []
-            for goal in options['goals']:
-                field = goal['领域']
-                _id = goal['id']
-                kv = goal.get('约束条件', []) + goal.get('需求信息', []) + goal.get('预订信息', [])
-                for k, v in kv:
-                    items.append([_id, field, k, v])
-            options['items'] = items
+            # items = []
+            # for goal in options['goals']:
+            #     field = goal['领域']
+            #     _id = goal['id']
+            #     kv = goal.get('约束条件', []) + goal.get('需求信息', []) + goal.get('预订信息', [])
+            #     for k, v in kv:
+            #         items.append([_id, field, k, v])
+            # options['items'] = items
             return options
 
         count = 0
@@ -66,10 +66,10 @@ def import_all():
             count += import_one(fullpath)
         except:
             pass
-        try:
-            os.remove(fullpath)
-        except:
-            pass
+        # try:
+        #     os.remove(fullpath)
+        # except:
+        #     pass
     return str(count)
 
 
